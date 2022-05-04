@@ -2413,7 +2413,9 @@ __metadata:
     "@ryb73/super-duper-parakeet": ^9.1.0
     "@shopify/eslint-plugin": ^41.2.0
     "@typescript-eslint/eslint-plugin": ^5.15.0
-    "@typescript-eslint/parser": ^5.15.0
+    "@typescript-eslint/parser": ^5.22.0
+    "@typescript-eslint/scope-manager": ^5.22.0
+    "@typescript-eslint/utils": ^5.22.0
     eslint: ^8.14.0
     eslint-config-hardcore: ~24.4.0
     eslint-config-prettier: ^8.5.0
@@ -2437,7 +2439,9 @@ __metadata:
     eslint-plugin-security: ^1.4.0
     eslint-plugin-sonarjs: ^0.12.0
     eslint-plugin-unicorn: ^41.0.0
+    fp-ts: ^2.12.1
     graphql: ^15.5.0
+    io-ts: ^2.2.16
     jest: ^27.0.0
     prettier: ^2.5.1
     putout: ^24.6.0
@@ -2863,7 +2867,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.15.0, @typescript-eslint/parser@npm:^5.4.0":
+"@typescript-eslint/parser@npm:^5.15.0, @typescript-eslint/parser@npm:^5.22.0, @typescript-eslint/parser@npm:^5.4.0":
   version: 5.22.0
   resolution: "@typescript-eslint/parser@npm:5.22.0"
   dependencies:
@@ -2880,7 +2884,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/scope-manager@npm:5.22.0":
+"@typescript-eslint/scope-manager@npm:5.22.0, @typescript-eslint/scope-manager@npm:^5.22.0":
   version: 5.22.0
   resolution: "@typescript-eslint/scope-manager@npm:5.22.0"
   dependencies:
@@ -2949,7 +2953,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:5.22.0, @typescript-eslint/utils@npm:^5.10.0, @typescript-eslint/utils@npm:^5.13.0":
+"@typescript-eslint/utils@npm:5.22.0, @typescript-eslint/utils@npm:^5.10.0, @typescript-eslint/utils@npm:^5.13.0, @typescript-eslint/utils@npm:^5.22.0":
   version: 5.22.0
   resolution: "@typescript-eslint/utils@npm:5.22.0"
   dependencies:
@@ -5466,6 +5470,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fp-ts@npm:^2.12.1":
+  version: 2.12.1
+  resolution: "fp-ts@npm:2.12.1"
+  checksum: 1e20e6b468191640a5f83cd52ccbfb361d27a6afbc47230870e63094b569cd9ae8763d0b9dee50eaed568bce8dd72e32ad1d695161bda8ec73e0296a02359832
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^2.0.0, fs-minipass@npm:^2.1.0":
   version: 2.1.0
   resolution: "fs-minipass@npm:2.1.0"
@@ -6093,6 +6104,15 @@ __metadata:
     has: ^1.0.3
     side-channel: ^1.0.4
   checksum: 1944f92e981e47aebc98a88ff0db579fd90543d937806104d0b96557b10c1f170c51fb777b97740a8b6ddeec585fca8c39ae99fd08a8e058dfc8ab70937238bf
+  languageName: node
+  linkType: hard
+
+"io-ts@npm:^2.2.16":
+  version: 2.2.16
+  resolution: "io-ts@npm:2.2.16"
+  peerDependencies:
+    fp-ts: ^2.5.0
+  checksum: 1b5855682e413cc92cfb5c51d0bdb24c99e407ab4e67821a53078f5d8dedbc387840c5b240cb19dd5d542bbdd2e2317ece17674a674f3de561ca0f00ae765bba
   languageName: node
   linkType: hard
 

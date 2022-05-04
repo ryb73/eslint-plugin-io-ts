@@ -2,7 +2,7 @@
   "name": "@ryb73/eslint-plugin-io-ts",
   "version": "0.1.0",
   "description": "ESLint plugin for io-ts",
-  "main": "index.js",
+  "main": "lib/src/index.js",
   "repository": "git@github.com:ryb73/eslint-plugin-io-ts.git",
   "author": "Ryan <rpbiwer@gmail.com>",
   "license": "MIT",
@@ -10,16 +10,16 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx"
+    "lint": "eslint . --ext ts --ext tsx --ext js --ext jsx",
+    "test": "node lib/src/test.js"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
     "@emotion/eslint-plugin": "^11.2.0",
     "@ryb73/eslint-config": "^6.0.16",
-    "@ryb73/super-duper-parakeet": "^9.1.0",
     "@shopify/eslint-plugin": "^41.2.0",
     "@typescript-eslint/eslint-plugin": "^5.15.0",
-    "@typescript-eslint/parser": "^5.15.0",
+    "@typescript-eslint/parser": "^5.22.0",
     "eslint": "^8.14.0",
     "eslint-config-hardcore": "~24.4.0",
     "eslint-config-prettier": "^8.5.0",
@@ -43,10 +43,17 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-sonarjs": "^0.12.0",
     "eslint-plugin-unicorn": "^41.0.0",
+    "fp-ts": "^2.12.1",
     "graphql": "^15.5.0",
+    "io-ts": "^2.2.16",
     "jest": "^27.0.0",
     "prettier": "^2.5.1",
     "putout": "^24.6.0",
     "typescript": "4.6.4"
+  },
+  "dependencies": {
+    "@ryb73/super-duper-parakeet": "^9.1.0",
+    "@typescript-eslint/scope-manager": "^5.22.0",
+    "@typescript-eslint/utils": "^5.22.0"
   }
 }
