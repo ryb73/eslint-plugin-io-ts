@@ -15,6 +15,20 @@ function findVariable(scope: Scope, name: string): Variable | undefined {
   return undefined;
 }
 
+function getPathImportedFrom(variable: Variable | undefined) {
+  if (!isDefined(variable)) return undefined;
+
+  const lastDef = variable.defs[variable.defs.length - 1];
+  if (lastDef?.type !== DefinitionType.ImportBinding) {
+    return undefined;
+  }
+
+  const importDeclaration = lastDef.parent;
+  if (importDeclaration.type !== `ImportDeclaration`) return undefined;
+
+  return importDeclaration.source.value;
+}
+
 export const rule = createRule({
   create(context) {
     return {
@@ -25,16 +39,8 @@ export const rule = createRule({
 
         if (node.callee.name === `type`) {
           const variable = findVariable(scope, `type`);
-          if (!isDefined(variable)) return;
-
-          const lastDef = variable.defs[variable.defs.length - 1];
-          if (lastDef?.type !== DefinitionType.ImportBinding) {
-            return;
-          }
-
-          const importDeclaration = lastDef.parent;
-          if (importDeclaration.type !== `ImportDeclaration`) return;
-          if (importDeclaration.source.value !== `io-ts`) return;
+          const importedFrom = getPathImportedFrom(variable);
+          if (importedFrom !== `io-ts`) return;
 
           context.report({
             messageId: `noType`,
